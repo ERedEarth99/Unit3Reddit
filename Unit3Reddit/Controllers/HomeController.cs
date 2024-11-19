@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using Unit3Reddit.Models;
 
 namespace Unit3Reddit.Controllers
 {
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private object _context;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -16,6 +19,20 @@ namespace Unit3Reddit.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        public IActionResult Post()
+        {
+            return View();
+        }
+
+        public IActionResult Fourms()
+        {
+            return View(); 
         }
 
         public IActionResult Privacy()

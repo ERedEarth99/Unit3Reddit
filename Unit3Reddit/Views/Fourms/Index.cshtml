@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Unit3Reddit.Models.Forum>
+
+<h2>Forums</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var forum in Model)
+        {
+            <tr>
+                <td>@forum.Name</td>
+                <td>@forum.Description</td>
+                <td>
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@forum.ForumId" class="btn btn-primary">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
